@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FrameActivity">
+
+    <fragment
+        android:id="@+id/fragment_step"
+        android:name="com.suwfe.sm.healthy.StepFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/fragment_alarm"
+        android:name="com.suwfe.sm.healthy.AlarmFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <fragment
+        android:id="@+id/fragment_water"
+        android:name="com.suwfe.sm.healthy.WaterFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+    <RadioGroup
+        android:id="@+id/bottomGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radioStep"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/step"
+            android:text="@string/rdo_step_label"/>
+        <RadioButton
+            android:id="@+id/radioAlarm"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/alarm"
+            android:text="@string/rdo_alarm_label"/>
+        <RadioButton
+            android:id="@+id/radioWater"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/water"
+            android:text="@string/rdo_water_label"/>
+    </RadioGroup>
+
+</LinearLayout>

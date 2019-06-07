@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Healthy</string>
+    <string name="step">计步</string>
+    <string name="alarm">闹钟</string>
+    <string name="water">喝水</string>
+    <string name="rdo_step_label">计步</string>
+    <string name="rdo_alarm_label">闹钟</string>
+    <string name="rdo_water_label">喝水</string>
+</resources>
