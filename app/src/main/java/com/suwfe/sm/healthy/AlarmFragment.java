@@ -1,5 +1,6 @@
 package com.suwfe.sm.healthy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,5 +23,10 @@ public class AlarmFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         TextView tv =(TextView)getView().findViewById(R.id.alarmTextView1);
         tv.setText("alarm");
+    }
+    public void myonClick(View btn){
+        Intent hello = new Intent(getActivity(), AlarmActivity.class);
+
+        startActivity(hello);
     }
 }

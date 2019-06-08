@@ -10,5 +10,10 @@
         android:layout_height="wrap_content"
         android:text="@string/alarm"
         android:textSize="30sp" />
+    <android.support.v7.widget.AppCompatButton
+        android:text="@string/design"
+        android:onClick="myonClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

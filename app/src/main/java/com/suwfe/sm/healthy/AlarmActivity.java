@@ -9,9 +9,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +21,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity {
+public class AlarmActivity extends AppCompatActivity {
     TextView show1;
     TextView show2;
     TextView show3;
@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
     String show3String = null;
     String defalutString = "目前无设置";
     AlertDialog builder=null;
-    Calendar c= Calendar.getInstance();
+    Calendar c=Calendar.getInstance();
     private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_alarm);
         mediaPlayer = MediaPlayer.create(this,R.raw.clockmusic2);
         SharedPreferences settings = getPreferences(Activity.MODE_PRIVATE);
         show1String = settings.getString("TIME1", defalutString);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 c.setTimeInMillis(System.currentTimeMillis());
                 int mHour=c.get(Calendar.HOUR_OF_DAY);
                 int mMinute=c.get(Calendar.MINUTE);
-                new TimePickerDialog(MainActivity.this,
+                new TimePickerDialog(AlarmActivity.this,
                         new TimePickerDialog.OnTimeSetListener()
                         {
                             public void onTimeSet(TimePicker view, int hourOfDay,
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
                                 c.set(Calendar.SECOND,0);
                                 c.set(Calendar.MILLISECOND,0);
 
-                                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                                PendingIntent sender= PendingIntent.getBroadcast(
-                                        MainActivity.this,0, intent, 0);
+                                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                                PendingIntent sender=PendingIntent.getBroadcast(
+                                        AlarmActivity.this,0, intent, 0);
                                 AlarmManager am;
                                 am = (AlarmManager)getSystemService(ALARM_SERVICE);
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MainActivity.this,"设置闹钟时间为"+tmpS,
+                                Toast.makeText(AlarmActivity.this,"设置闹钟时间为"+tmpS,
                                         Toast.LENGTH_SHORT)
                                         .show();
                             }
@@ -112,13 +112,13 @@ public class MainActivity extends AppCompatActivity {
         delete1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                PendingIntent sender= PendingIntent.getBroadcast(
-                        MainActivity.this,0, intent, 0);
+                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                PendingIntent sender=PendingIntent.getBroadcast(
+                        AlarmActivity.this,0, intent, 0);
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MainActivity.this,"闹钟时间删除",
+                Toast.makeText(AlarmActivity.this,"闹钟时间删除",
                         Toast.LENGTH_SHORT).show();
                 show1.setText("目前无设置");
 
@@ -141,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 int mMinute=c.get(Calendar.MINUTE);
 
 
-                new TimePickerDialog(MainActivity.this,
+                new TimePickerDialog(AlarmActivity.this,
                         new TimePickerDialog.OnTimeSetListener()
                         {
                             public void onTimeSet(TimePicker view, int hourOfDay,
@@ -153,9 +153,9 @@ public class MainActivity extends AppCompatActivity {
                                 c.set(Calendar.SECOND,0);
                                 c.set(Calendar.MILLISECOND,0);
 
-                                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                                PendingIntent sender= PendingIntent.getBroadcast(
-                                        MainActivity.this,0, intent, 0);
+                                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                                PendingIntent sender=PendingIntent.getBroadcast(
+                                        AlarmActivity.this,0, intent, 0);
                                 AlarmManager am;
                                 am = (AlarmManager)getSystemService(ALARM_SERVICE);
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MainActivity.this,"设置闹钟时间为"+tmpS,
+                                Toast.makeText(AlarmActivity.this,"设置闹钟时间为"+tmpS,
                                         Toast.LENGTH_SHORT)
                                         .show();
                             }
@@ -184,13 +184,13 @@ public class MainActivity extends AppCompatActivity {
         delete2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                PendingIntent sender= PendingIntent.getBroadcast(
-                        MainActivity.this,0, intent, 0);
+                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                PendingIntent sender=PendingIntent.getBroadcast(
+                        AlarmActivity.this,0, intent, 0);
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MainActivity.this,"闹钟时间删除",
+                Toast.makeText(AlarmActivity.this,"闹钟时间删除",
                         Toast.LENGTH_SHORT).show();
                 show2.setText("目前无设置");
 
@@ -212,7 +212,7 @@ public class MainActivity extends AppCompatActivity {
                 int mMinute=c.get(Calendar.MINUTE);
 
 
-                new TimePickerDialog(MainActivity.this,
+                new TimePickerDialog(AlarmActivity.this,
                         new TimePickerDialog.OnTimeSetListener()
                         {
                             public void onTimeSet(TimePicker view, int hourOfDay,
@@ -224,9 +224,9 @@ public class MainActivity extends AppCompatActivity {
                                 c.set(Calendar.SECOND,0);
                                 c.set(Calendar.MILLISECOND,0);
 
-                                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                                PendingIntent sender= PendingIntent.getBroadcast(
-                                        MainActivity.this,0, intent, 0);
+                                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                                PendingIntent sender=PendingIntent.getBroadcast(
+                                        AlarmActivity.this,0, intent, 0);
                                 AlarmManager am;
                                 am = (AlarmManager)getSystemService(ALARM_SERVICE);
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putString("TIME1", tmpS);
                                 editor.commit();
 
-                                Toast.makeText(MainActivity.this,"设置闹钟时间为"+tmpS,
+                                Toast.makeText(AlarmActivity.this,"设置闹钟时间为"+tmpS,
                                         Toast.LENGTH_SHORT)
                                         .show();
                             }
@@ -255,13 +255,13 @@ public class MainActivity extends AppCompatActivity {
         delete3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CallAlarm.class);
-                PendingIntent sender= PendingIntent.getBroadcast(
-                        MainActivity.this,0, intent, 0);
+                Intent intent = new Intent(AlarmActivity.this, CallAlarm.class);
+                PendingIntent sender=PendingIntent.getBroadcast(
+                        AlarmActivity.this,0, intent, 0);
                 AlarmManager am;
                 am =(AlarmManager)getSystemService(ALARM_SERVICE);
                 am.cancel(sender);
-                Toast.makeText(MainActivity.this,"闹钟时间删除",
+                Toast.makeText(AlarmActivity.this,"闹钟时间删除",
                         Toast.LENGTH_SHORT).show();
                 show3.setText("目前无设置");
 
@@ -277,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer.stop();
         if(keyCode == KeyEvent.KEYCODE_BACK){
             mediaPlayer.stop();
-            builder = new AlertDialog.Builder(MainActivity.this)
+            builder = new AlertDialog.Builder(AlarmActivity.this)
 
                     .setTitle("温馨提示：")
                     .setMessage("您是否要退出程序？")
@@ -286,7 +286,7 @@ public class MainActivity extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog,
                                                     int whichButton) {
                                     mediaPlayer.stop();
-                                    MainActivity.this.finish();
+                                    AlarmActivity.this.finish();
                                 }
                             })
                     .setNegativeButton("取消",

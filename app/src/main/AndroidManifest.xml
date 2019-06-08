@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.suwfe.sm.healthy">
+    package="com.suwfe.sm.healthy"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8"/>
 
     <application
         android:allowBackup="true"
@@ -9,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver android:name=".CallAlarm" android:process=".remote"></receiver>
         <activity android:name=".FrameActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
