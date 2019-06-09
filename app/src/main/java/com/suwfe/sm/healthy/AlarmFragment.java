@@ -26,7 +26,6 @@ public class AlarmFragment extends Fragment {
     }
     public void myonClick(View btn){
         Intent hello = new Intent(getActivity(), AlarmActivity.class);
-
         startActivity(hello);
     }
 }

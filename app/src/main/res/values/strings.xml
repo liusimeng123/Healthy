@@ -7,4 +7,8 @@
     <string name="rdo_step_label">计步</string>
     <string name="rdo_alarm_label">闹钟</string>
     <string name="rdo_water_label">喝水</string>
+    <string name="watar_total_amount">请输入您计划的喝水总量</string>
+    <string name="total_amount">以ML（毫升）为单位</string>
+    <string name="cup_capacity">请输入您杯子的容量</string>
+    <string name="water_button">提交</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.suwfe.sm.healthy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -22,5 +23,9 @@ public class WaterFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         TextView tv =(TextView)getView().findViewById(R.id.waterTextView1);
         tv.setText("water");
+    }
+    public void set(View view){
+        Intent hello2 = new Intent(getActivity(), WaterActivity.class);
+        startActivity(hello2);
     }
 }

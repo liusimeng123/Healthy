@@ -3,7 +3,8 @@
     package="com.suwfe.sm.healthy"
     android:versionCode="1"
     android:versionName="1.0">
-    <uses-sdk android:minSdkVersion="8"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <receiver android:name=".CallAlarm" android:process=".remote"></receiver>
+        <activity android:name=".Water2Activity"></activity>
+        <activity android:name=".WaterActivity" />
+
+        <receiver
+            android:name=".CallAlarm"
+            android:process=".remote" />
+
         <activity android:name=".FrameActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
