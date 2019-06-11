@@ -9,18 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class StepFragment extends Fragment {
+public class PersonalFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frame_step, container);
+        return inflater.inflate(R.layout.frame_personal, container);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        TextView tv =(TextView)getView().findViewById(R.id.stepTextView1);
-        tv.setText("step");
+        TextView tv =(TextView)getView().findViewById(R.id.personalTextView1);
+        tv.setText("personal");
     }
 }

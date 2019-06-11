@@ -9,8 +9,8 @@
     tools:context=".FrameActivity">
 
     <fragment
-        android:id="@+id/fragment_step"
-        android:name="com.suwfe.sm.healthy.StepFragment"
+        android:id="@+id/fragment_personal"
+        android:name="com.suwfe.sm.healthy.PersonalFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="10"/>
@@ -33,20 +33,20 @@
         android:layout_weight="0.5"
         android:orientation="horizontal">
         <RadioButton
-            android:id="@+id/radioStep"
+            android:id="@+id/radioPersonal"
             style="@style/rg_btn_style"
-            android:drawableTop="@drawable/step"
+            android:drawableTop="@drawable/personal"
             android:text="@string/rdo_step_label"/>
-        <RadioButton
-            android:id="@+id/radioAlarm"
-            style="@style/rg_btn_style"
-            android:drawableTop="@drawable/alarm"
-            android:text="@string/rdo_alarm_label"/>
         <RadioButton
             android:id="@+id/radioWater"
             style="@style/rg_btn_style"
             android:drawableTop="@drawable/water"
             android:text="@string/rdo_water_label"/>
+        <RadioButton
+            android:id="@+id/radioAlarm"
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/alarm"
+            android:text="@string/rdo_alarm_label"/>
     </RadioGroup>
 
 </LinearLayout>

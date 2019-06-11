@@ -16,14 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="40sp"
-        android:textColor="#fff000" />
+        android:textColor="#008577" />
     <TextView
         android:id="@+id/clock1"
         android:layout_marginTop="55dp"
         android:text="闹钟一"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ffaa00"
+        android:textColor="#2E64FE"
         android:textSize="25sp"/>
 
     <Button
@@ -35,10 +35,10 @@
         android:background="@drawable/button_shape"
         android:layout_marginTop="45dp"
         android:textSize="18sp"
-        android:layout_marginRight="85dp"
+        android:layout_marginRight="20dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/show1"
@@ -48,7 +48,7 @@
         android:textSize="25sp"
         android:layout_below="@id/settime1"
         android:text="目前无设置"
-        android:textColor="#ff3700"/>
+        android:textColor="#2E2EFE"/>
 
     <Button
         android:id="@+id/delete1"
@@ -63,7 +63,7 @@
         android:background="@drawable/button_shape"
         android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/clock2"
@@ -71,7 +71,7 @@
         android:text="闹钟二"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorOrange"
+        android:textColor="@color/colorBlue2"
         android:textSize="25sp"/>
     <Button
         android:id="@+id/settime2"
@@ -85,7 +85,7 @@
         android:layout_marginRight="85dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/show2"
@@ -95,7 +95,7 @@
         android:textSize="25sp"
         android:layout_below="@id/settime2"
         android:text="目前未设置"
-        android:textColor="@color/colorRed"/>
+        android:textColor="@color/colorBlue1"/>
 
     <Button
         android:id="@+id/delete2"
@@ -110,7 +110,7 @@
         android:background="@drawable/button_shape"
         android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/clock3"
@@ -118,7 +118,7 @@
         android:text="闹钟三"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorOrange"
+        android:textColor="@color/colorBlue2"
         android:textSize="25sp"/>
 
     <Button
@@ -133,7 +133,7 @@
         android:layout_marginRight="85dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/show3"
@@ -143,7 +143,7 @@
         android:textSize="25sp"
         android:layout_below="@id/settime3"
         android:text="目前未设置"
-        android:textColor="@color/colorRed"/>
+        android:textColor="@color/colorBlue1"/>
 
     <Button
         android:id="@+id/delete3"
@@ -158,5 +158,5 @@
         android:background="@drawable/button_shape"
         android:text="删除闹钟"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="85dp" />
+        android:layout_marginEnd="20dp" />
 </RelativeLayout>

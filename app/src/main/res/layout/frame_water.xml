@@ -14,10 +14,6 @@
         android:layout_height="wrap_content"
         android:text="@string/water"
         android:textSize="30sp" />
-    <Button
-        android:text="@string/design"
-        android:onClick="set"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

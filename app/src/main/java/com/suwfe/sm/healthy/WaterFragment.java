@@ -24,8 +24,8 @@ public class WaterFragment extends Fragment {
         TextView tv =(TextView)getView().findViewById(R.id.waterTextView1);
         tv.setText("water");
     }
-    public void set(View view){
-        Intent hello2 = new Intent(getActivity(), WaterActivity.class);
-        startActivity(hello2);
-    }
+   // public void set(View view){
+       // Intent hello2 = new Intent(getActivity(), WaterActivity.class);
+        //startActivity(hello2);
+   // }
 }

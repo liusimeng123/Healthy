@@ -15,17 +15,12 @@ public class AlarmFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frame_alarm, container);
+        return inflater.inflate(R.layout.activity_main, container);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        TextView tv =(TextView)getView().findViewById(R.id.alarmTextView1);
-        tv.setText("alarm");
     }
-    public void myonClick(View btn){
-        Intent hello = new Intent(getActivity(), AlarmActivity.class);
-        startActivity(hello);
-    }
+
 }
