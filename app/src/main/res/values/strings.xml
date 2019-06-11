@@ -8,8 +8,13 @@
     <string name="rdo_step_label">计步</string>
     <string name="rdo_alarm_label">闹钟</string>
     <string name="rdo_water_label">喝水</string>
-    <string name="watar_total_amount">请输入您计划的喝水总量</string>
+    <string name="watar_total_amount">您每天应饮用水量（ml）</string>
     <string name="total_amount">以ML（毫升）为单位</string>
     <string name="cup_capacity">请输入您杯子的容量</string>
     <string name="water_button">提交</string>
+    <string name="weight">请输入您的体重</string>
+    <string name="hint_water">如50KG</string>
+    <string name="hint_water2">如：2000ml</string>
+    <string name="water_inc">您又多喝了多少ml水</string>
+    <string name="water_left">您还需要喝多少水</string>
 </resources>

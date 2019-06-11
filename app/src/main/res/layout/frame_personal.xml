@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
+    android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingRight="16dp"
     android:paddingTop="16dp"
-    android:orientation="vertical">
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/personalTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/step"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/weight"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/personalEditView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:hint="@string/hint_water"
+        android:inputType="numberDecimal"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/personalTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/watar_total_amount"
         android:textSize="30sp" />
 
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/personalTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="30sp" />
+
+
+</LinearLayout>

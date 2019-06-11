@@ -8,12 +8,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <EditText
+        android:id="@+id/waterEditView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:inputType="numberDecimal"
+        android:hint="@string/water_inc" />
+
     <TextView
         android:id="@+id/waterTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/water"
+        android:gravity="center"
+        android:text="@string/water_left"
         android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/waterTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:text="TextView" />
 
 
 </LinearLayout>
