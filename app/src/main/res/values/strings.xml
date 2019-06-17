@@ -17,4 +17,8 @@
     <string name="hint_water2">如：2000ml</string>
     <string name="water_inc">您又多喝了多少ml水</string>
     <string name="water_left">您还需要喝多少水</string>
+    <string name="design">设置你的锻炼计划</string>
+    <string name="hint_step">如：600000步</string>
+    <string name="design_alarm2">嘻嘻，不要怕忘</string>
+    <string name="design_alarm3">设定闹钟来提醒你吧！！！</string>
 </resources>

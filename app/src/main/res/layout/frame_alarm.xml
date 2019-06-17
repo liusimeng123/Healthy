@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/beijing"
     android:orientation="vertical"
     android:paddingLeft="16dp"
     android:paddingTop="16dp"
@@ -10,15 +9,26 @@
     android:paddingBottom="16dp">
 
     <TextView
-        android:id="@+id/alarmTextView1"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/alarm"
+        android:layout_height="60sp"
+        android:text="@string/design_alarm2"
         android:textSize="30sp" />
+
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:text="@string/design_alarm3"
+        android:textSize="30sp" />
+
 
     <Button
         android:id="@+id/button_alarm"
-        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="386dp"
         android:background="@drawable/button_shape"

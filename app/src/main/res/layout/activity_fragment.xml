@@ -35,13 +35,13 @@
         <RadioButton
             android:id="@+id/radioPersonal"
             style="@style/rg_btn_style"
-            android:drawableTop="@drawable/personal"
-            android:text="@string/rdo_step_label"/>
+            android:drawableTop="@drawable/water"
+            android:text="@string/rdo_water_label"/>
         <RadioButton
             android:id="@+id/radioWater"
             style="@style/rg_btn_style"
-            android:drawableTop="@drawable/water"
-            android:text="@string/rdo_water_label"/>
+            android:drawableTop="@drawable/step"
+            android:text="@string/rdo_step_label"/>
         <RadioButton
             android:id="@+id/radioAlarm"
             style="@style/rg_btn_style"
