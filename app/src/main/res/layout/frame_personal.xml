@@ -38,18 +38,19 @@
 
 
     <TextView
-        android:id="@+id/personalTextView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textSize="30sp" />
+    android:id="@+id/personalTextView3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:textSize="30sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:onClick="onClick"
         android:text="Button" />
 
 

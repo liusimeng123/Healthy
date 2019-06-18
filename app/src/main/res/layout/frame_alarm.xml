@@ -24,7 +24,6 @@
         android:text="@string/design_alarm3"
         android:textSize="30sp" />
 
-
     <Button
         android:id="@+id/button_alarm"
         android:layout_gravity="center"
