@@ -44,6 +44,8 @@ public class WaterFragment extends Fragment {
                step.setText("500");
             }else if(text.equals("4~6岁")){
                 step.setText("5000");
+            }else if(text.equals("6~12岁")){
+                step.setText("5000");
             }
             }
             @Override
