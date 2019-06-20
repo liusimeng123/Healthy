@@ -29,4 +29,13 @@
         <item>250</item>
         <item>300</item>
     </string-array>
+
+    <string-array name="age">
+        <item>2~3岁</item>
+        <item>4~6岁</item>
+        <item>6~12岁</item>
+        <item>12~18岁</item>
+        <item>青壮年成人</item>
+        <item>老年人</item>
+    </string-array>
 </resources>
