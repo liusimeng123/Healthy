@@ -42,11 +42,12 @@
             style="@style/rg_btn_style"
             android:drawableTop="@drawable/step"
             android:text="@string/rdo_step_label"/>
+
         <RadioButton
             android:id="@+id/radioAlarm"
             style="@style/rg_btn_style"
-            android:drawableTop="@drawable/alarm"
-            android:text="@string/rdo_alarm_label"/>
+            android:drawableTop="@drawable/history"
+            android:text="@string/rdo_history_label" />
     </RadioGroup>
 
 </LinearLayout>

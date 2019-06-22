@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Titles"
-        />
-
+        android:textSize="30sp"
+        android:text="@string/history" />
     <ListView
         android:id="@id/android:list"
+        android:layout_gravity="center"
+        android:foregroundGravity="center"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        ></ListView>
+        android:textSize="30sp"
+        android:choiceMode="singleChoice"
+        android:padding="10dp"
+        android:textColor="#2196F3"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

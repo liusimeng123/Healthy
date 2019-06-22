@@ -80,12 +80,16 @@ public class PersonalFragment extends Fragment {
     class LocationCheckedListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent();
-            intent.setClass(getActivity(), CountActivity.class); //从前者跳到后者，特别注意的是，在fragment中，用getActivity()来获取当前的activity
-            weight2=Float.parseFloat(weight.getText().toString());
-            intent.putExtra("weight",weight2);
-            Log.i(TAG, "onClick: "+weight2);
-            getActivity().startActivityForResult(intent,1);;
+            if((weight.getText().toString()).equals("")){
+                Toast.makeText(getActivity(), "请输入内容", Toast.LENGTH_SHORT).show();
+            }else {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), CountActivity.class); //从前者跳到后者，特别注意的是，在fragment中，用getActivity()来获取当前的activity
+                weight2=Float.parseFloat(weight.getText().toString());
+                intent.putExtra("weight",weight2);
+                getActivity().startActivityForResult(intent,1);
+
+            }
         }
     }
 

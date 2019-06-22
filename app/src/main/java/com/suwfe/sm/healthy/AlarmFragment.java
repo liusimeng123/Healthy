@@ -1,6 +1,8 @@
 package com.suwfe.sm.healthy;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -34,6 +37,7 @@ public class AlarmFragment extends Fragment implements AdapterView.OnItemClickLi
 
     private String TAG = AlarmFragment.class.getName();
     private ListView list ;
+    private  float weight2;
     private ArrayAdapter adapter;
 
     /**
@@ -56,17 +60,12 @@ public class AlarmFragment extends Fragment implements AdapterView.OnItemClickLi
         Date today = Calendar.getInstance().getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         final String todayString = sdf.format(today);
-
-
-
-        Log.i("run","日期相等，从数据库中获取数据");
+        Log.i("run","从数据库中获取数据");
         StepManager dbManager = new StepManager(getActivity());
         for (StepItem rateItem : dbManager.listAll()) {
-            if (!todayString.equals(rateItem.getCurName())) {
-                retList.add(rateItem.getCurName() + "=>" + rateItem.getCurRate());
+                retList.add("日期：" + rateItem.getCurName() + "===>" + "历史步数：" + rateItem.getCurRate());
                 Log.i(TAG, "List list  " + rateItem.getCurName() + "=>" + rateItem.getCurRate());
 
-            }
         }
         adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,retList);
         list.setAdapter(adapter);
@@ -83,7 +82,6 @@ public class AlarmFragment extends Fragment implements AdapterView.OnItemClickLi
             list.add(map);
 
         }
-
         return list;
     }
 
@@ -102,10 +100,15 @@ public class AlarmFragment extends Fragment implements AdapterView.OnItemClickLi
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    }
 
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1 && resultCode==2){
 
+            Bundle bundle = data.getExtras();
+            weight2 = bundle.getFloat("key_dollar",40.0f);
+        }
 
-
-
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

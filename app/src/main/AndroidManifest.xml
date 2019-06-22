@@ -20,16 +20,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/tubiao"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/tubiao1"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CountActivity"></activity>
-
-        <receiver
-            android:name=".CallAlarm"
-            android:process=".remote" />
 
         <activity android:name=".FrameActivity">
             <intent-filter>
@@ -38,7 +34,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
         <activity android:name=".MainActivity2"></activity>
 
         <service

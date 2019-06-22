@@ -16,12 +16,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class WaterFragment extends Fragment {
     @Nullable
     String text="";
     Spinner spinner;
     TextView step;
+    private  float step2;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
@@ -34,7 +36,7 @@ public class WaterFragment extends Fragment {
         Resources res =getResources();
         String[] age=res.getStringArray(R.array.age );
         spinner = (Spinner)view.findViewById(R.id.spacer2);//获取到spacer1
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,age);//创建Arrayadapter适配器
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.myspinner,age);//创建Arrayadapter适配器
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {//通过此方法为下拉列表设置点击事件
             @Override
@@ -43,9 +45,15 @@ public class WaterFragment extends Fragment {
             if(text.equals("2~3岁")){
                step.setText("500");
             }else if(text.equals("4~6岁")){
-                step.setText("5000");
+                step.setText("1000");
             }else if(text.equals("6~12岁")){
-                step.setText("5000");
+                step.setText("2000");
+            }else if(text.equals("12~18岁")){
+                step.setText("4000");
+            }else if(text.equals("青壮年成人")){
+                step.setText("10000");
+            }else {
+                step.setText("2000");
             }
             }
             @Override
@@ -93,8 +101,21 @@ public class WaterFragment extends Fragment {
             Intent intent = new Intent();
             intent.setClass(getActivity(), MainActivity2.class); //从前者跳到后者，特别注意的是，在fragment中，用getActivity()来获取当前的activity
             getActivity().startActivity(intent);
+            step2=Float.parseFloat(step.getText().toString());
+            intent.putExtra("step",step2);
+            getActivity().startActivityForResult(intent,1);
         }
 
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1 && resultCode==2){
+
+            Bundle bundle = data.getExtras();
+            //weight2 = bundle.getFloat("key_dollar",40.0f);
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 }

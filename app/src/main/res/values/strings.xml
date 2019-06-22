@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Healthy</string>
+    <string name="app_name">常青树</string>
     <string name="step">计步</string>
     <string name="alarm">闹钟</string>
     <string name="water">喝水</string>
@@ -10,17 +10,23 @@
     <string name="rdo_water_label">喝水</string>
     <string name="watar_total_amount">您每天应饮用水量（ml）</string>
     <string name="total_amount">以ML（毫升）为单位</string>
-    <string name="cup_capacity">请输入您杯子的容量</string>
+    <string name="cup_capacity">杯子的容量</string>
     <string name="water_button">提交</string>
     <string name="weight">请输入您的体重</string>
     <string name="hint_water">如50KG</string>
     <string name="hint_water2">如：2000ml</string>
-    <string name="water_inc">您又多喝了多少ml水</string>
-    <string name="water_left">您还需要喝多少次水</string>
+    <string name="water_left">您一天需喝水杯数</string>
     <string name="design">设置你的锻炼计划</string>
     <string name="hint_step">如：600000步</string>
     <string name="design_alarm2">嘻嘻，不要怕忘</string>
     <string name="design_alarm3">设定闹钟来提醒你吧！！！</string>
+    <string name="rdo_history_label">记录</string>
+    <string name="return_btn">返回</string>
+    <string name="step_num">您一天的最佳步数</string>
+    <string name="age">年龄段</string>
+    <string name="save_num">保存运动记录</string>
+    <string name="history">历史记录</string>
+    <string name="btn">提交</string>
 
     <string-array name="water_ml">
         <item>100</item>
