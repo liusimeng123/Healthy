@@ -103,19 +103,11 @@ public class WaterFragment extends Fragment {
             getActivity().startActivity(intent);
             step2=Float.parseFloat(step.getText().toString());
             intent.putExtra("step",step2);
-            getActivity().startActivityForResult(intent,1);
+            getActivity().startActivity(intent);
         }
 
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode==1 && resultCode==2){
 
-            Bundle bundle = data.getExtras();
-            //weight2 = bundle.getFloat("key_dollar",40.0f);
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 
 }

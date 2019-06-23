@@ -60,7 +60,7 @@
 
     <Button
         android:id="@+id/button"
-        android:background="@drawable/button_shape"
+        android:background="@mipmap/btn2"
         android:textColor="@color/colorWhite"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
